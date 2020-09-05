@@ -15,7 +15,9 @@
 本地调试
 
 npm install gitbook-cli -g
+
 gitbook install
+
 npm run start
 
 

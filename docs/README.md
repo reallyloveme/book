@@ -1,3 +1,3 @@
 # README
 
-This is a book powered by [GitBook](https://github.com/GitbookIO/gitbook).
+个人笔记整理和收集

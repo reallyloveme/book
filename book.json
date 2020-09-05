@@ -3,33 +3,24 @@
   "title": "个人知识记录",
   "author": "songjun",
   "description": "This is a sample book created by gitbook",
-  "extension": null,
-  "generator": "site",
-  "isbn": "",
   "links": {
       "sharing": {
           "all": null
       },
       "sidebar": {
-        "github": "https://github.com/reallyloveme/vue-next"
+        "github": "https://github.com/reallyloveme/book"
       }
   },
-  "output": null,
-  "pdf": {
-      "fontSize": 12,
-      "footerTemplate": null,
-      "headerTemplate": null,
-      "margin": {
-          "bottom": 36,
-          "left": 62,
-          "right": 62,
-          "top": 36
-      },
-      "pageNumbers": false,
-      "paperSize": "a4"
-  },
   "plugins": [
-    "multipart"
+    "multipart",
+    "highlight",
+    "-search",
+    "search-pro",
+    "sharing",
+    "livereload",
+    "toggle2"
   ],
-  "variables": {}
+  "pluginsConfig": {
+    "expandable-chapters-small":{}
+  }
 }
