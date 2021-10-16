@@ -24,7 +24,7 @@ jobs:
         node-version: ${{ matrix.node-version }}
     # 如果写了测试用例,也可以自动测试
     - run: npm install gitbook-cli -g
-    - run: gitbook-cli install
+    - run: gitbook install
     - run: npm run build
       env:
         CI: true
