@@ -9,7 +9,7 @@ npm install webpack webpack-cli --save-dev
 
 二：hello webapck
 
-![img](https://cdn.nlark.com/yuque/0/2020/png/735885/1591754426812-ba5e809a-bec1-45be-ac2e-81d113a0cef4.png)
+![img](https://gitee.com/myreally/pic/raw/master/1591754426812-ba5e809a-bec1-45be-ac2e-81d113a0cef4.png)
 
 ```javascript
 安装lodash
@@ -123,7 +123,7 @@ module.exports = {
 
 打包后文件
 
-![img](https://cdn.nlark.com/yuque/0/2020/png/735885/1591755078660-9c11c283-fb0d-468d-892c-0f167cb620aa.png)
+![img](https://gitee.com/myreally/pic/raw/master/1591755078660-9c11c283-fb0d-468d-892c-0f167cb620aa.png)
 
 四：加载图片
 
@@ -196,4 +196,4 @@ npm install clean-webpack-plugin --save-dev
 
 
 
-![img](https://cdn.nlark.com/yuque/0/2020/png/735885/1608446004466-45bb7d42-bfe4-42e8-b80c-103c6fc2a69d.png)
+![img](https://gitee.com/myreally/pic/raw/master/1608446004466-45bb7d42-bfe4-42e8-b80c-103c6fc2a69d.png)

@@ -2,7 +2,7 @@
 
 ## promise方法
 
-![img](https://cdn.nlark.com/yuque/0/2020/png/735885/1609225111638-4e78fd87-aa46-4581-ab8c-e7ef354139fd.png)
+![img](https://gitee.com/myreally/pic/raw/master/1609225111638-4e78fd87-aa46-4581-ab8c-e7ef354139fd.png)
 
 ## promise对象
 
@@ -150,7 +150,7 @@ function needsNew() {
 
 **普通promise流程图**
 
-![img](https://cdn.nlark.com/yuque/0/2020/png/735885/1609210066181-27e3d023-8ba0-4de0-bc4b-9953cba04d39.png)
+![img](https://gitee.com/myreally/pic/raw/master/1609210066181-27e3d023-8ba0-4de0-bc4b-9953cba04d39.png)
 
 **总结：**
 
