@@ -476,8 +476,191 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="&#x8D77;&#x6B65;"><a name="&#x8D77;&#x6B65;" class="anchor-navigation-ex-anchor" href="#&#x8D77;&#x6B65;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8D77;&#x6B65;</h1>
+<p>&#x67E5;&#x770B;package.json&#x6587;&#x4EF6;</p>
+<pre><code class="lang-jsx"><span class="hljs-string">&quot;dev&quot;</span>: <span class="hljs-string">&quot;rollup -w -c scripts/config.js --environment TARGET:web-full-dev&quot;</span>
+</code></pre>
+<p>&#x67E5;&#x770B;scripts/config.js&#x6587;&#x4EF6;&#xFF0C;&#x627E;&#x5230;target&#xFF1A;web-full-dev</p>
+<pre><code class="lang-jsx"><span class="hljs-keyword">if</span> (process.env.TARGET) {
+  <span class="hljs-built_in">module</span>.exports = genConfig(process.env.TARGET)
+} <span class="hljs-keyword">else</span> {
+  exports.getBuild = genConfig
+  exports.getAllBuilds = <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> <span class="hljs-built_in">Object</span>.keys(builds).map(genConfig)
+}
+<span class="hljs-comment">// Runtime+compiler development build (Browser)</span>
+  <span class="hljs-string">&apos;web-full-dev&apos;</span>: {
+    <span class="hljs-attr">entry</span>: resolve(<span class="hljs-string">&apos;web/entry-runtime-with-compiler.js&apos;</span>),
+    <span class="hljs-attr">dest</span>: resolve(<span class="hljs-string">&apos;dist/vue.js&apos;</span>),
+    <span class="hljs-attr">format</span>: <span class="hljs-string">&apos;umd&apos;</span>,
+    <span class="hljs-attr">env</span>: <span class="hljs-string">&apos;development&apos;</span>,
+    <span class="hljs-attr">alias</span>: { <span class="hljs-attr">he</span>: <span class="hljs-string">&apos;./entity-decoder&apos;</span> },
+    banner
+  },
+</code></pre>
+<p>&#x53D1;&#x73B0;&#x5165;&#x53E3;&#x6587;&#x4EF6;web/entry-runtime-with-compiler.js&#x3002;web/&#x8DEF;&#x5F84;&#x53EF;&#x4EE5;&#x67E5;&#x770B;alias.js&#x6587;&#x4EF6;</p>
+<pre><code class="lang-jsx"><span class="hljs-keyword">const</span> path = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;path&apos;</span>)
+
+<span class="hljs-keyword">const</span> resolve = <span class="hljs-function"><span class="hljs-params">p</span> =&gt;</span> path.resolve(__dirname, <span class="hljs-string">&apos;../&apos;</span>, p)
+
+<span class="hljs-built_in">module</span>.exports = {
+  <span class="hljs-attr">vue</span>: resolve(<span class="hljs-string">&apos;src/platforms/web/entry-runtime-with-compiler&apos;</span>),
+  <span class="hljs-attr">compiler</span>: resolve(<span class="hljs-string">&apos;src/compiler&apos;</span>),
+  <span class="hljs-attr">core</span>: resolve(<span class="hljs-string">&apos;src/core&apos;</span>),
+  <span class="hljs-attr">shared</span>: resolve(<span class="hljs-string">&apos;src/shared&apos;</span>),
+  <span class="hljs-attr">web</span>: resolve(<span class="hljs-string">&apos;src/platforms/web&apos;</span>),
+  <span class="hljs-attr">weex</span>: resolve(<span class="hljs-string">&apos;src/platforms/weex&apos;</span>),
+  <span class="hljs-attr">server</span>: resolve(<span class="hljs-string">&apos;src/server&apos;</span>),
+  <span class="hljs-attr">sfc</span>: resolve(<span class="hljs-string">&apos;src/sfc&apos;</span>)
+}
+</code></pre>
+<p>&#x5206;&#x6790;&#x53EF;&#x77E5;&#x5165;&#x53E3;&#x6587;&#x4EF6;&#x4E3A;src/platforms/web/entry-runtime-with-compiler.js</p>
+<pre><code class="lang-jsx"><span class="hljs-number">1.</span> vue&#x5B9E;&#x4F8B;&#x4F4D;&#x7F6E;src/core/instance/index.js
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Vue</span> (<span class="hljs-params">options</span>) </span>{
+  <span class="hljs-keyword">if</span> (process.env.NODE_ENV !== <span class="hljs-string">&apos;production&apos;</span> &amp;&amp;
+    !(<span class="hljs-keyword">this</span> <span class="hljs-keyword">instanceof</span> Vue)
+  ) {
+    warn(<span class="hljs-string">&apos;Vue is a constructor and should be called with the `new` keyword&apos;</span>)
+  }
+  <span class="hljs-keyword">this</span>._init(options)
+}
+&#x5224;&#x65AD;&#x662F;&#x5426;&#x662F;&#x751F;&#x4EA7;&#x73AF;&#x5883;&#xFF0C;&#x4E14;&#x4E0D;&#x662F;&#x901A;&#x8FC7;<span class="hljs-keyword">new</span>&#x5173;&#x952E;&#x5B57;&#x6765;&#x521B;&#x5EFA;&#x5BF9;&#x8C61;&#x7684;&#x8BDD;&#xFF0C;&#x5C31;&#x5728;&#x63A7;&#x5236;&#x53F0;&#x6253;&#x5370;&#x8B66;&#x544A;&#xFF0C;&#x4E4B;&#x540E;&#x8C03;&#x7528;<span class="hljs-keyword">this</span>._init(options)
+&#x51FD;&#x6570;
+
+&#x5982;&#x4E0B;&#x51FD;&#x6570;&#x662F; Vue.prototype&#x539F;&#x578B;&#x4E0A;&#x7ED1;&#x5B9A;&#x4E00;&#x4E9B;&#x5B9E;&#x4F8B;&#x65B9;&#x6CD5;
+<span class="hljs-comment">// _init</span>
+initMixin(Vue)  
+<span class="hljs-comment">// $set&#x3001;$delete&#x3001;$watch</span>
+stateMixin(Vue)
+<span class="hljs-comment">// $on&#x3001;$once&#x3001;$off&#x3001;$emit</span>
+eventsMixin(Vue)
+<span class="hljs-comment">// _update&#x3001;$forceUpdate&#x3001;$destroy</span>
+lifecycleMixin(Vue)
+<span class="hljs-comment">// $nextTick&#x3001;_render&#x3001;&#x4EE5;&#x53CA;&#x591A;&#x4E2A;&#x5185;&#x90E8;&#x8C03;&#x7528;&#x7684;&#x65B9;&#x6CD5;</span>
+renderMixin(Vue)
+
+<span class="hljs-number">2.</span> /src/core/index.js
+<span class="hljs-comment">// vue&#x5BF9;&#x5BB6;&#x6DFB;&#x52A0;&#x9759;&#x6001;&#x65B9;&#x6CD5;&#x548C;&#x5C5E;&#x6027;</span>
+initGlobalAPI(Vue)
+
+<span class="hljs-comment">// &#x5224;&#x65AD;&#x662F;&#x4E0D;&#x662F;&#x670D;&#x52A1;&#x7AEF;&#x6E32;&#x67D3;</span>
+<span class="hljs-built_in">Object</span>.defineProperty(Vue.prototype, <span class="hljs-string">&apos;$isServer&apos;</span>, {
+  <span class="hljs-attr">get</span>: isServerRendering
+})
+<span class="hljs-comment">// &#x670D;&#x52A1;&#x7AEF;&#x6E32;&#x67D3;&#x4E0A;&#x4E0B;&#x6587;</span>
+<span class="hljs-built_in">Object</span>.defineProperty(Vue.prototype, <span class="hljs-string">&apos;$ssrContext&apos;</span>, {
+  get () {
+    <span class="hljs-comment">/* istanbul ignore next */</span>
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.$vnode &amp;&amp; <span class="hljs-keyword">this</span>.$vnode.ssrContext
+  }
+})
+<span class="hljs-comment">// &#x51FD;&#x6570;&#x5F0F;&#x6E32;&#x67D3;&#x4E0A;&#x4E0B;&#x6587;</span>
+<span class="hljs-comment">// expose FunctionalRenderContext for ssr runtime helper installation</span>
+<span class="hljs-built_in">Object</span>.defineProperty(Vue, <span class="hljs-string">&apos;FunctionalRenderContext&apos;</span>, {
+  <span class="hljs-attr">value</span>: FunctionalRenderContext
+})
+
+Vue.version = <span class="hljs-string">&apos;__VERSION__&apos;</span>
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> Vue
+
+<span class="hljs-number">3.</span> /src/platforms/web/runtime/index.js
+&#x7ED9;Vue.config&#x6DFB;&#x52A0;&#x5E73;&#x53F0;&#x65B9;&#x6CD5;&#xFF0C;&#x6269;&#x5C55;Vue.options.directives&#x548C;Vue.options.components&#x3002;&#x5728;Vue.prototype&#x4E0A;
+&#x6DFB;&#x52A0;__patch__&#x65B9;&#x6CD5;&#xFF08;&#x865A;&#x62DF;dom&#xFF09;&#x548C;&#x6302;&#x8F7D;$mount
+<span class="hljs-comment">// install platform specific utils</span>
+Vue.config.mustUseProp = mustUseProp
+Vue.config.isReservedTag = isReservedTag
+Vue.config.isReservedAttr = isReservedAttr
+Vue.config.getTagNamespace = getTagNamespace
+Vue.config.isUnknownElement = isUnknownElement
+
+<span class="hljs-comment">// install platform runtime directives &amp; components</span>
+extend(Vue.options.directives, platformDirectives)
+extend(Vue.options.components, platformComponents)
+
+<span class="hljs-comment">// install platform patch function</span>
+Vue.prototype.__patch__ = inBrowser ? patch : noop
+
+<span class="hljs-comment">// public mount method</span>
+Vue.prototype.$mount = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">
+  el?: string | Element,
+  hydrating?: boolean
+</span>): <span class="hljs-title">Component</span> </span>{
+  el = el &amp;&amp; inBrowser ? query(el) : <span class="hljs-literal">undefined</span>
+  <span class="hljs-keyword">return</span> mountComponent(<span class="hljs-keyword">this</span>, el, hydrating)
+}
+
+<span class="hljs-number">4.</span> src/platforms/web/entry-runtime-<span class="hljs-keyword">with</span>-compiler.js
+&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x65B9;&#x6CD5; Vue.prototype.$mount&#x548C; &#x5C06;compileToFunctions&#x6302;&#x8F7D;&#x5230;Vue.compile
+<span class="hljs-keyword">const</span> mount = Vue.prototype.$mount
+Vue.prototype.$mount = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">
+  el?: string | Element,
+  hydrating?: boolean
+</span>): <span class="hljs-title">Component</span> </span>{
+  el = el &amp;&amp; query(el)
+
+  <span class="hljs-comment">/* istanbul ignore if */</span>
+  <span class="hljs-keyword">if</span> (el === <span class="hljs-built_in">document</span>.body || el === <span class="hljs-built_in">document</span>.documentElement) {
+    process.env.NODE_ENV !== <span class="hljs-string">&apos;production&apos;</span> &amp;&amp; warn(
+      <span class="hljs-string">`Do not mount Vue to &lt;html&gt; or &lt;body&gt; - mount to normal elements instead.`</span>
+    )
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>
+  }
+
+  <span class="hljs-keyword">const</span> options = <span class="hljs-keyword">this</span>.$options
+  <span class="hljs-comment">// resolve template/el and convert to render function</span>
+  <span class="hljs-keyword">if</span> (!options.render) {
+    <span class="hljs-keyword">let</span> template = options.template
+    <span class="hljs-keyword">if</span> (template) {
+      <span class="hljs-keyword">if</span> (<span class="hljs-keyword">typeof</span> template === <span class="hljs-string">&apos;string&apos;</span>) {
+        <span class="hljs-keyword">if</span> (template.charAt(<span class="hljs-number">0</span>) === <span class="hljs-string">&apos;#&apos;</span>) {
+          template = idToTemplate(template)
+          <span class="hljs-comment">/* istanbul ignore if */</span>
+          <span class="hljs-keyword">if</span> (process.env.NODE_ENV !== <span class="hljs-string">&apos;production&apos;</span> &amp;&amp; !template) {
+            warn(
+              <span class="hljs-string">`Template element not found or is empty: <span class="hljs-subst">${options.template}</span>`</span>,
+              <span class="hljs-keyword">this</span>
+            )
+          }
+        }
+      } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (template.nodeType) {
+        template = template.innerHTML
+      } <span class="hljs-keyword">else</span> {
+        <span class="hljs-keyword">if</span> (process.env.NODE_ENV !== <span class="hljs-string">&apos;production&apos;</span>) {
+          warn(<span class="hljs-string">&apos;invalid template option:&apos;</span> + template, <span class="hljs-keyword">this</span>)
+        }
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>
+      }
+    } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (el) {
+      template = getOuterHTML(el)
+    }
+    <span class="hljs-keyword">if</span> (template) {
+      <span class="hljs-comment">/* istanbul ignore if */</span>
+      <span class="hljs-keyword">if</span> (process.env.NODE_ENV !== <span class="hljs-string">&apos;production&apos;</span> &amp;&amp; config.performance &amp;&amp; mark) {
+        mark(<span class="hljs-string">&apos;compile&apos;</span>)
+      }
+
+      <span class="hljs-keyword">const</span> { render, staticRenderFns } = compileToFunctions(template, {
+        <span class="hljs-attr">outputSourceRange</span>: process.env.NODE_ENV !== <span class="hljs-string">&apos;production&apos;</span>,
+        shouldDecodeNewlines,
+        shouldDecodeNewlinesForHref,
+        <span class="hljs-attr">delimiters</span>: options.delimiters,
+        <span class="hljs-attr">comments</span>: options.comments
+      }, <span class="hljs-keyword">this</span>)
+      options.render = render
+      options.staticRenderFns = staticRenderFns
+
+      <span class="hljs-comment">/* istanbul ignore if */</span>
+      <span class="hljs-keyword">if</span> (process.env.NODE_ENV !== <span class="hljs-string">&apos;production&apos;</span> &amp;&amp; config.performance &amp;&amp; mark) {
+        mark(<span class="hljs-string">&apos;compile end&apos;</span>)
+        measure(<span class="hljs-string">`vue <span class="hljs-subst">${<span class="hljs-keyword">this</span>._name}</span> compile`</span>, <span class="hljs-string">&apos;compile&apos;</span>, <span class="hljs-string">&apos;compile end&apos;</span>)
+      }
+    }
+  }
+  <span class="hljs-keyword">return</span> mount.call(<span class="hljs-keyword">this</span>, el, hydrating)
+}
+Vue.compile = compileToFunctions
+</code></pre>
 <footer class="page-footer"><span class="copyright">powered by Gitbook</span><span class="footer-modification">&#x8BE5;&#x6587;&#x4EF6;&#x6700;&#x540E;&#x4FEE;&#x6539;&#x65F6;&#x95F4;&#xFF1A;
-2021-10-16 18:48:44
+2021-10-17 15:49:08
 </span></footer>
                                 
                                 </section>
@@ -521,7 +704,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"vue2源码解析","level":"1.4","depth":1,"next":{"title":"起步","level":"1.4.1","depth":2,"path":"vue2源码解析/起步.md","ref":"vue2源码解析/起步.md","articles":[]},"previous":{"title":"常用js","level":"1.3.3","depth":2,"path":"js知识点/常用js.md","ref":"js知识点/常用js.md","articles":[]},"dir":"ltr"},"config":{"plugins":["multipart","highlight","-search","search-pro","sharing","livereload","chapter-fold","splitter","anchor-navigation-ex","lightbox","hide-element","tbfed-pagefooter","copy-code-button"],"root":"./notes","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"","modify_label":"该文件最后修改时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"livereload":{},"splitter":{},"search-pro":{},"multipart":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"lightbox":{"jquery":true,"sameUuid":false},"expandable-chapters-small":{},"copy-code-button":{},"sharing":{"all":["facebook","google","twitter","weibo","instapaper"],"facebook":true,"google":false,"instapaper":false,"twitter":true,"vk":false,"weibo":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"songjun","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"个人知识记录","links":{"sharing":{"all":null},"sidebar":{"github":"https://github.com/reallyloveme/book"}},"gitbook":"*","description":"This is a sample book created by gitbook"},"file":{"path":"vue2源码解析/起步.md","mtime":"2021-10-16T10:48:44.354Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-10-17T04:18:51.608Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"vue2源码解析","level":"1.4","depth":1,"next":{"title":"起步","level":"1.4.1","depth":2,"path":"vue2源码解析/起步.md","ref":"vue2源码解析/起步.md","articles":[]},"previous":{"title":"常用js","level":"1.3.3","depth":2,"path":"js知识点/常用js.md","ref":"js知识点/常用js.md","articles":[]},"dir":"ltr"},"config":{"plugins":["multipart","highlight","-search","search-pro","sharing","livereload","chapter-fold","splitter","anchor-navigation-ex","lightbox","hide-element","tbfed-pagefooter","copy-code-button"],"root":"./notes","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"","modify_label":"该文件最后修改时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"livereload":{},"splitter":{},"search-pro":{},"multipart":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"lightbox":{"jquery":true,"sameUuid":false},"expandable-chapters-small":{},"copy-code-button":{},"sharing":{"all":["facebook","google","twitter","weibo","instapaper"],"facebook":true,"google":false,"instapaper":false,"twitter":true,"vk":false,"weibo":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"songjun","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"个人知识记录","links":{"sharing":{"all":null},"sidebar":{"github":"https://github.com/reallyloveme/book"}},"gitbook":"*","description":"This is a sample book created by gitbook"},"file":{"path":"vue2源码解析/起步.md","mtime":"2021-10-17T07:49:08.290Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-10-17T14:33:00.147Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
