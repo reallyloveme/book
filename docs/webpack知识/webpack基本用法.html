@@ -1,0 +1,758 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>webpack知识 · 个人知识记录</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="songjun">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-multipart/multipart.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-lightbox/css/lightbox.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="webpack基本用法.html" />
+    
+    
+    <link rel="prev" href="../工程化/cli开发.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://github.com/reallyloveme/book" target="_blank" class="custom-link">github</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    概况
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../css知识点/双飞翼和圣杯布局.html">
+            
+                <a href="../css知识点/双飞翼和圣杯布局.html">
+            
+                    
+                    css基础知识
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../css知识点/双飞翼和圣杯布局.html">
+            
+                <a href="../css知识点/双飞翼和圣杯布局.html">
+            
+                    
+                    圣杯布局和双飞翼布局
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../js知识点/数据结构类型.html">
+            
+                <a href="../js知识点/数据结构类型.html">
+            
+                    
+                    javascript知识
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../js知识点/数据结构类型.html">
+            
+                <a href="../js知识点/数据结构类型.html">
+            
+                    
+                    数据结构类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../js知识点/Promise.html">
+            
+                <a href="../js知识点/Promise.html">
+            
+                    
+                    Promise
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../js知识点/常用js.html">
+            
+                <a href="../js知识点/常用js.html">
+            
+                    
+                    常用js
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../vue2源码解析/起步.html">
+            
+                <a href="../vue2源码解析/起步.html">
+            
+                    
+                    vue2源码解析
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../vue2源码解析/起步.html">
+            
+                <a href="../vue2源码解析/起步.html">
+            
+                    
+                    起步
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../vue3源码解析/起步.html">
+            
+                <a href="../vue3源码解析/起步.html">
+            
+                    
+                    vue3源码解析
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../vue3源码解析/起步.html">
+            
+                <a href="../vue3源码解析/起步.html">
+            
+                    
+                    起步
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../浏览器/cookie， session，单点登录，token.html">
+            
+                <a href="../浏览器/cookie， session，单点登录，token.html">
+            
+                    
+                    浏览器
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../浏览器/cookie， session，单点登录，token.html">
+            
+                <a href="../浏览器/cookie， session，单点登录，token.html">
+            
+                    
+                    浏览器
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../工程化/eslite配置表.html">
+            
+                <a href="../工程化/eslite配置表.html">
+            
+                    
+                    工程化
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../工程化/eslite配置表.html">
+            
+                <a href="../工程化/eslite配置表.html">
+            
+                    
+                    eslite
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../工程化/cli开发.html">
+            
+                <a href="../工程化/cli开发.html">
+            
+                    
+                    cli开发
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.8" data-path="webpack基本用法.html">
+            
+                <a href="webpack基本用法.html">
+            
+                    
+                    webpack知识
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.8.1" data-path="webpack基本用法.html">
+            
+                <a href="webpack基本用法.html">
+            
+                    
+                    基本用法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../mysql/基本用法.html">
+            
+                <a href="../mysql/基本用法.html">
+            
+                    
+                    mysql
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../mysql/基本用法.html">
+            
+                <a href="../mysql/基本用法.html">
+            
+                    
+                    基本用法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >webpack知识</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="webpack"><a name="webpack" class="anchor-navigation-ex-anchor" href="#webpack"><i class="fa fa-link" aria-hidden="true"></i></a>webpack</h1>
+<p>&#x4E00;&#xFF1A;&#x521D;&#x59CB;&#x5316;&#x9879;&#x76EE;&#xFF0C;&#x5B89;&#x88C5;webpack</p>
+<pre><code class="lang-shell">npm init -y
+npm install webpack webpack-cli --save-dev
+</code></pre>
+<p>&#x4E8C;&#xFF1A;hello webapck</p>
+<p><a href="https://cdn.nlark.com/yuque/0/2020/png/735885/1591754426812-ba5e809a-bec1-45be-ac2e-81d113a0cef4.png" data-lightbox="729cc9d7-432c-4c7e-a816-3dee8411eedb" data-title="img" target="_blank"><img src="https://cdn.nlark.com/yuque/0/2020/png/735885/1591754426812-ba5e809a-bec1-45be-ac2e-81d113a0cef4.png" alt="img"></a></p>
+<pre><code class="lang-javascript">&#x5B89;&#x88C5;lodash
+npm install --save lodash
+<span class="hljs-comment">// index.js</span>
+<span class="hljs-keyword">import</span> _ <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;lodash&apos;</span>
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">component</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-keyword">var</span> element = <span class="hljs-built_in">document</span>.createElement(<span class="hljs-string">&apos;div&apos;</span>)
+
+  <span class="hljs-comment">// Lodash&#xFF08;&#x76EE;&#x524D;&#x901A;&#x8FC7;&#x4E00;&#x4E2A; script &#x811A;&#x672C;&#x5F15;&#x5165;&#xFF09;&#x5BF9;&#x4E8E;&#x6267;&#x884C;&#x8FD9;&#x4E00;&#x884C;&#x662F;&#x5FC5;&#x9700;&#x7684;</span>
+  <span class="hljs-comment">// Lodash, now imported by this script</span>
+  element.innerHTML = _.join([<span class="hljs-string">&apos;Hello&apos;</span>, <span class="hljs-string">&apos;webpack&apos;</span>], <span class="hljs-string">&apos; &apos;</span>)
+
+  <span class="hljs-keyword">return</span> element
+}
+
+<span class="hljs-built_in">document</span>.body.appendChild(component())
+
+<span class="hljs-comment">// package.json</span>
+{
+  <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;webpack-demon&quot;</span>,
+  <span class="hljs-string">&quot;version&quot;</span>: <span class="hljs-string">&quot;1.0.0&quot;</span>,
+  <span class="hljs-string">&quot;description&quot;</span>: <span class="hljs-string">&quot;&quot;</span>,
+  <span class="hljs-string">&quot;private&quot;</span>: <span class="hljs-literal">true</span>,
+  <span class="hljs-string">&quot;scripts&quot;</span>: {
+    <span class="hljs-string">&quot;test&quot;</span>: <span class="hljs-string">&quot;echo \&quot;Error: no test specified\&quot; &amp;&amp; exit 1&quot;</span>,
+    <span class="hljs-string">&quot;build&quot;</span>: <span class="hljs-string">&quot;webpack&quot;</span>
+  },
+  <span class="hljs-string">&quot;keywords&quot;</span>: [],
+  <span class="hljs-string">&quot;author&quot;</span>: <span class="hljs-string">&quot;&quot;</span>,
+  <span class="hljs-string">&quot;license&quot;</span>: <span class="hljs-string">&quot;ISC&quot;</span>,
+  <span class="hljs-string">&quot;devDependencies&quot;</span>: {
+    <span class="hljs-string">&quot;css-loader&quot;</span>: <span class="hljs-string">&quot;^3.5.3&quot;</span>,
+    <span class="hljs-string">&quot;style-loader&quot;</span>: <span class="hljs-string">&quot;^1.2.1&quot;</span>,
+    <span class="hljs-string">&quot;webpack&quot;</span>: <span class="hljs-string">&quot;^4.43.0&quot;</span>,
+    <span class="hljs-string">&quot;webpack-cli&quot;</span>: <span class="hljs-string">&quot;^3.3.11&quot;</span>
+  },
+  <span class="hljs-string">&quot;dependencies&quot;</span>: {
+    <span class="hljs-string">&quot;lodash&quot;</span>: <span class="hljs-string">&quot;^4.17.15&quot;</span>
+  }
+}
+
+<span class="hljs-comment">// webpack.config.js</span>
+<span class="hljs-keyword">const</span> path = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;path&apos;</span>)
+<span class="hljs-built_in">module</span>.exports = {
+  <span class="hljs-attr">entry</span>: <span class="hljs-string">&apos;./src/index.js&apos;</span>,
+  <span class="hljs-attr">output</span>: {
+    <span class="hljs-attr">filename</span>: <span class="hljs-string">&apos;bundle.js&apos;</span>,
+    <span class="hljs-attr">path</span>: path.resolve(__dirname, <span class="hljs-string">&apos;dist&apos;</span>)
+  }
+}
+<span class="hljs-comment">// index.html</span>
+&lt;!doctype html&gt;
+  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>asset management<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;bundle.js&quot;</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span></span>
+</code></pre>
+<p>&#x4E09;&#xFF1A;&#x52A0;&#x8F7D;css</p>
+<pre><code class="lang-javascript">......&#x5B89;&#x88C5;&#x63D2;&#x4EF6;
+npm install --save-dev style-loader css-loader
+......&#x65B0;&#x589E;style.css&#x6587;&#x4EF6;
+<span class="hljs-comment">// style.css</span>
+.hello {
+  <span class="hljs-attr">color</span>: red;
+}
+<span class="hljs-comment">//index.js</span>
+<span class="hljs-keyword">import</span> _ <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;lodash&apos;</span>
+<span class="hljs-keyword">import</span> <span class="hljs-string">&apos;./style.css&apos;</span>
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">component</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-keyword">var</span> element = <span class="hljs-built_in">document</span>.createElement(<span class="hljs-string">&apos;div&apos;</span>)
+
+  <span class="hljs-comment">// Lodash&#xFF08;&#x76EE;&#x524D;&#x901A;&#x8FC7;&#x4E00;&#x4E2A; script &#x811A;&#x672C;&#x5F15;&#x5165;&#xFF09;&#x5BF9;&#x4E8E;&#x6267;&#x884C;&#x8FD9;&#x4E00;&#x884C;&#x662F;&#x5FC5;&#x9700;&#x7684;</span>
+  <span class="hljs-comment">// Lodash, now imported by this script</span>
+  element.innerHTML = _.join([<span class="hljs-string">&apos;Hello&apos;</span>, <span class="hljs-string">&apos;webpack&apos;</span>], <span class="hljs-string">&apos; &apos;</span>)
+  element.classList.add(<span class="hljs-string">&apos;hello&apos;</span>)
+  <span class="hljs-keyword">return</span> element
+}
+
+<span class="hljs-built_in">document</span>.body.appendChild(component())
+<span class="hljs-comment">// webpack.config.js</span>
+<span class="hljs-keyword">const</span> path = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;path&apos;</span>)
+<span class="hljs-built_in">module</span>.exports = {
+  <span class="hljs-attr">entry</span>: <span class="hljs-string">&apos;./src/index.js&apos;</span>,
+  <span class="hljs-attr">output</span>: {
+    <span class="hljs-attr">filename</span>: <span class="hljs-string">&apos;bundle.js&apos;</span>,
+    <span class="hljs-attr">path</span>: path.resolve(__dirname, <span class="hljs-string">&apos;dist&apos;</span>)
+  },
+  <span class="hljs-attr">module</span>: {
+    <span class="hljs-attr">rules</span>: [
+      {
+        <span class="hljs-attr">test</span>: <span class="hljs-regexp">/\.css$/</span>,
+        <span class="hljs-attr">use</span>: [
+          <span class="hljs-string">&apos;style-loader&apos;</span>,
+          <span class="hljs-string">&apos;css-loader&apos;</span>
+        ]
+      }
+    ]
+  }
+}
+</code></pre>
+<p>&#x6253;&#x5305;&#x540E;&#x6587;&#x4EF6;</p>
+<p><a href="https://cdn.nlark.com/yuque/0/2020/png/735885/1591755078660-9c11c283-fb0d-468d-892c-0f167cb620aa.png" data-lightbox="5eb4876d-edce-4d75-8269-cda9e703ba95" data-title="img" target="_blank"><img src="https://cdn.nlark.com/yuque/0/2020/png/735885/1591755078660-9c11c283-fb0d-468d-892c-0f167cb620aa.png" alt="img"></a></p>
+<p>&#x56DB;&#xFF1A;&#x52A0;&#x8F7D;&#x56FE;&#x7247;</p>
+<pre><code class="lang-javascript">......&#x5B89;&#x88C5;&#x63D2;&#x4EF6;
+npm install --save-dev file-loader
+<span class="hljs-comment">// webpack.config.js</span>
+<span class="hljs-keyword">const</span> path = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;path&apos;</span>)
+<span class="hljs-built_in">module</span>.exports = {
+  <span class="hljs-attr">entry</span>: <span class="hljs-string">&apos;./src/index.js&apos;</span>,
+  <span class="hljs-attr">output</span>: {
+    <span class="hljs-attr">filename</span>: <span class="hljs-string">&apos;bundle.js&apos;</span>,
+    <span class="hljs-attr">path</span>: path.resolve(__dirname, <span class="hljs-string">&apos;dist&apos;</span>)
+  },
+  <span class="hljs-attr">module</span>: {
+    <span class="hljs-attr">rules</span>: [
+      {
+        <span class="hljs-attr">test</span>: <span class="hljs-regexp">/\.css$/</span>,
+        <span class="hljs-attr">use</span>: [
+          <span class="hljs-string">&apos;style-loader&apos;</span>,
+          <span class="hljs-string">&apos;css-loader&apos;</span>
+        ]
+      },
+      {
+        <span class="hljs-attr">test</span>: <span class="hljs-regexp">/\.(png|svg|jpg|gif)$/</span>,
+        <span class="hljs-attr">use</span>: [<span class="hljs-string">&apos;file-loader&apos;</span>]
+      }
+    ]
+  }
+}
+<span class="hljs-comment">// index.js</span>
+<span class="hljs-keyword">import</span> _ <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;lodash&apos;</span>
+<span class="hljs-keyword">import</span> <span class="hljs-string">&apos;./style.css&apos;</span>
+<span class="hljs-keyword">import</span> icon <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./icon.jpg&apos;</span>
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">component</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-keyword">var</span> element = <span class="hljs-built_in">document</span>.createElement(<span class="hljs-string">&apos;div&apos;</span>)
+
+  <span class="hljs-comment">// Lodash&#xFF08;&#x76EE;&#x524D;&#x901A;&#x8FC7;&#x4E00;&#x4E2A; script &#x811A;&#x672C;&#x5F15;&#x5165;&#xFF09;&#x5BF9;&#x4E8E;&#x6267;&#x884C;&#x8FD9;&#x4E00;&#x884C;&#x662F;&#x5FC5;&#x9700;&#x7684;</span>
+  <span class="hljs-comment">// Lodash, now imported by this script</span>
+  element.innerHTML = _.join([<span class="hljs-string">&apos;Hello&apos;</span>, <span class="hljs-string">&apos;webpack&apos;</span>], <span class="hljs-string">&apos; &apos;</span>)
+  element.classList.add(<span class="hljs-string">&apos;hello&apos;</span>)
+  <span class="hljs-comment">// &#x56FE;&#x50CF;&#x5D4C;&#x5165;div</span>
+  <span class="hljs-keyword">const</span> myIcon = <span class="hljs-keyword">new</span> Image()
+  myIcon.src =  icon
+  element.appendChild(myIcon)
+  <span class="hljs-keyword">return</span> element
+}
+
+<span class="hljs-built_in">document</span>.body.appendChild(component())
+</code></pre>
+<p>&#x4E94;&#xFF1A;&#x52A0;&#x8F7D;&#x6570;&#x636E;</p>
+<pre><code class="lang-shell">......&#x5B89;&#x88C5;&#x63D2;&#x4EF6;
+npm install --save-dev csv-loader xml-loader
+</code></pre>
+<p>&#x516D;&#xFF1A;&#x7BA1;&#x7406;&#x8F93;&#x51FA;</p>
+<pre><code class="lang-shell">// &#x8BBE;&#x7F6E;HtmlWebpackPlugin
+......&#x5B89;&#x88C5;HtmlWebpackPlugin
+npm install --save-dev html-webpack-plugin
+// &#x6E05;&#x7406;dist&#x6587;&#x4EF6;
+......&#x5B89;&#x88C5;&#x63D2;&#x4EF6;clean-webpack-plugin
+npm install clean-webpack-plugin --save-dev
+</code></pre>
+<p><a href="https://cdn.nlark.com/yuque/0/2020/png/735885/1608446004466-45bb7d42-bfe4-42e8-b80c-103c6fc2a69d.png" data-lightbox="5610c3bb-a0c3-45ae-9e14-3283f2f5a028" data-title="img" target="_blank"><img src="https://cdn.nlark.com/yuque/0/2020/png/735885/1608446004466-45bb7d42-bfe4-42e8-b80c-103c6fc2a69d.png" alt="img"></a> </p>
+<footer class="page-footer"><span class="copyright">powered by Gitbook</span><span class="footer-modification">&#x8BE5;&#x6587;&#x4EF6;&#x6700;&#x540E;&#x4FEE;&#x6539;&#x65F6;&#x95F4;&#xFF1A;
+2021-10-17 10:57:40
+</span></footer>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../工程化/cli开发.html" class="navigation navigation-prev " aria-label="Previous page: cli开发">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="webpack基本用法.html" class="navigation navigation-next " aria-label="Next page: 基本用法">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"webpack知识","level":"1.8","depth":1,"next":{"title":"基本用法","level":"1.8.1","depth":2,"path":"webpack知识/webpack基本用法.md","ref":"webpack知识/webpack基本用法.md","articles":[]},"previous":{"title":"cli开发","level":"1.7.2","depth":2,"path":"工程化/cli开发.md","ref":"工程化/cli开发.md","articles":[]},"dir":"ltr"},"config":{"plugins":["multipart","highlight","-search","search-pro","sharing","livereload","chapter-fold","splitter","anchor-navigation-ex","lightbox","hide-element","tbfed-pagefooter","copy-code-button"],"root":"./notes","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"","modify_label":"该文件最后修改时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"livereload":{},"splitter":{},"search-pro":{},"multipart":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"lightbox":{"jquery":true,"sameUuid":false},"expandable-chapters-small":{},"copy-code-button":{},"sharing":{"all":["facebook","google","twitter","weibo","instapaper"],"facebook":true,"google":false,"instapaper":false,"twitter":true,"vk":false,"weibo":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"songjun","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"个人知识记录","links":{"sharing":{"all":null},"sidebar":{"github":"https://github.com/reallyloveme/book"}},"gitbook":"*","description":"This is a sample book created by gitbook"},"file":{"path":"webpack知识/webpack基本用法.md","mtime":"2021-10-17T02:57:40.106Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-10-17T03:03:26.835Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lightbox/js/lightbox.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-hide-element/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

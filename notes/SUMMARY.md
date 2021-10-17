@@ -1,11 +1,3 @@
-<!--
- * @Author: your name
- * @Date: 2021-10-16 14:22:05
- * @LastEditTime: 2021-10-16 14:49:44
- * @LastEditors: Please set LastEditors
- * @Description: In User Settings Edit
- * @FilePath: /book/docs/SUMMARY.md
--->
 # Summary
 
 * [概况](README.md)
@@ -13,7 +5,18 @@
     * [圣杯布局和双飞翼布局](css知识点/双飞翼和圣杯布局.md)
 * [javascript知识](js知识点/数据结构类型.md)
     * [数据结构类型](js知识点/数据结构类型.md)
+    * [Promise](js知识点/Promise.md)
+    * [常用js](js知识点/常用js.md)
 * [vue2源码解析](vue2源码解析/起步.md)
     * [起步](vue2源码解析/起步.md)
 * [vue3源码解析](vue3源码解析/起步.md)
     * [起步](vue3源码解析/起步.md)
+* [浏览器](浏览器/cookie， session，单点登录，token.md)
+    * [浏览器](浏览器/cookie， session，单点登录，token.md)
+* [工程化](工程化/eslite配置表.md)
+    * [eslite](工程化/eslite配置表.md)
+    * [cli开发](工程化/cli开发.md)
+* [webpack知识](webpack知识/webpack基本用法.md)
+    * [基本用法](webpack知识/webpack基本用法.md)
+* [mysql](mysql/基本用法.md)
+    * [基本用法](mysql/基本用法.md)
