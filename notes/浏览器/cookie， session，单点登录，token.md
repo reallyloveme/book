@@ -28,9 +28,7 @@ HttpOnly是指禁止通过js脚本获取cookie，只能在请求头中进行cook
 
 ### 2 session
 
-
-
-![img](https://cdn.nlark.com/yuque/__puml/b7add15094f3135cec700dad381a2d7f.svg)
+![img](https://gitee.com/myreally/pic/raw/master/b7add15094f3135cec700dad381a2d7f-20211017120425379.svg)
 
 1. 浏览器登录账户密码
 2. 服务端通过查询用户库校验账号密码有效性
@@ -54,7 +52,7 @@ HttpOnly是指禁止通过js脚本获取cookie，只能在请求头中进行cook
 
 ### 3 Token
 
-![img](https://cdn.nlark.com/yuque/__puml/58c7f4ff390371fd0578ce0d01a48b9c.svg)
+![img](https://gitee.com/myreally/pic/raw/master/58c7f4ff390371fd0578ce0d01a48b9c-20211017120217477.svg)
 
 token流程：
 
@@ -92,7 +90,7 @@ refresh token流程
 
 系统在同一个主域名下，利于**a.baidu.com** **b.baidu.com**则直接把cookie domain设置为主域名 **baidu.com**
 
-![image-20211017102619815](/Users/songjun/Library/Application Support/typora-user-images/image-20211017102619815.png)
+![image-20211017102619815](https://gitee.com/myreally/pic/raw/master/image-20211017102619815.png)
 
 #### 4.2 主域名不同的单点登录
 
