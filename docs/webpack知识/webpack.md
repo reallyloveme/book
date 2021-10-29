@@ -210,6 +210,8 @@ Webpack hooks https://webpack.js.org/api/compiler-hooks/
 5. 递归依赖树，将每个模块给对应的Loader处理
 6. 合并Loader处理完的结果，将打包结果输出到dist目录
 
+![image-20211029090205826](https://gitee.com/myreally/pic/raw/master/image-20211029090205826.png)
+
 ## 源码解析
 
 执行**webpack/bin/webpack.js** 中**runCli(cli)**方法，启动 webpack cli的打包流程
